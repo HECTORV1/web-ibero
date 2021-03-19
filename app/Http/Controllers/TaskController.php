@@ -12,7 +12,8 @@ class TaskController extends Controller
     public function index()
     {
         $tareas = Task::all();
-       return view('index')->with('tareas',$tareas); 
+        $proyectos = Project::all();
+       return view('index')->with('tareas',$tareas)->with('proyectos', $proyectos); 
     }
 
     //Vista crear
